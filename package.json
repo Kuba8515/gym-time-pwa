@@ -30,7 +30,6 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.15.8",
-    "@babel/plugin-transform-modules-commonjs": "^7.16.0",
     "@next/eslint-plugin-next": "11.1.2",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.4.1",
