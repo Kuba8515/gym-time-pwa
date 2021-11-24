@@ -5,7 +5,6 @@ describe('Navigation', () => {
     cy.get('[data-cy="index-register-link"]').should('exist');
     cy.get('[data-cy="index-login-link"]').click();
     cy.get('[data-cy="home-exercises-link"]').click();
-    cy.get('[data-cy="home-singleExercise-link"]').should('exist');
 
     // cy.get('nav').should('contain', 'theme');
   });

@@ -172,7 +172,7 @@ export default function Exercises(props) {
             return (
               <li key={`exercise-li-${exercise.id}`}>
                 <Link href={`/exercises/${exercise.id}`}>
-                  <a data-cy="home-singleExercise-link">{exercise.title}</a>
+                  <a>{exercise.title}</a>
                 </Link>
               </li>
             );
