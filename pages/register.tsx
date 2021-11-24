@@ -63,24 +63,27 @@ export default function RegisterPage(props: Props) {
           Name
           <input
             value={name}
+            placeholder="Enter your name"
             onChange={(event) => setName(event.currentTarget.value)}
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-white appearance-none border-2 border-purple-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
           />
         </label>
         <label className="block text-gray-500 font-bold mb-1 md:mb-0 pr-4">
           Username *
           <input
             value={username}
+            placeholder="Enter your username"
             onChange={(event) => setUsername(event.currentTarget.value)}
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-white appearance-none border-2 border-purple-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
           />
         </label>
         <label className="block text-gray-500 font-bold mb-1 md:mb-0 pr-4">
           Email
           <input
             value={email}
+            placeholder="Enter your email"
             onChange={(event) => setEmail(event.currentTarget.value)}
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-white appearance-none border-2 border-purple-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
           />
         </label>
         <label className="block text-gray-500 font-bold mb-1 md:mb-0 pr-4">
@@ -88,8 +91,9 @@ export default function RegisterPage(props: Props) {
           <input
             type="password"
             value={password}
+            placeholder="Enter your password"
             onChange={(event) => setPassword(event.currentTarget.value)}
-            className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+            className="bg-white appearance-none border-2 border-purple-500 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
           />
         </label>
 
