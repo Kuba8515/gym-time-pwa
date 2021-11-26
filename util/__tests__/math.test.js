@@ -1,3 +1,6 @@
+/**
+ * @jest-environment jsdom
+ */
 import { sum } from '../math';
 
 test('should add two numbers correctly', () => {

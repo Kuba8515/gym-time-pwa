@@ -34,16 +34,16 @@ export default function Home() {
                       className="flex mx-auto py-2.5 pl-3.5 lg:pr-12 pr-7 sm:pr-12 md:pr-7 lg:ml-14 shadow-lg bg-indigo-700 text-white rounded-sm w-48"
                     >
                       <svg
-                        class="w-6 h-6 mr-4 ml-8"
+                        className="w-6 h-6 mr-4 ml-8"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
                         />
                       </svg>
@@ -56,16 +56,16 @@ export default function Home() {
                       className="flex mx-auto py-2.5 pl-3.5 lg:pr-12 pr-7 sm:pr-12 md:pr-7 lg:ml-14 shadow-lg bg-indigo-700 text-white rounded-sm w-48 mt-4"
                     >
                       <svg
-                        class="w-6 h-6 mr-4 ml-8"
+                        className="w-6 h-6 mr-4 ml-8"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
                           d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"
                         />
                       </svg>
@@ -80,16 +80,16 @@ export default function Home() {
                         className="flex space-x-3 items-center mx-auto py-2.5 pl-3.5 lg:pr-12 pr-7 sm:pr-12 md:pr-7 lg:ml-14 shadow-lg bg-indigo-700 text-white rounded-sm w-64 text-center"
                       >
                         <svg
-                          class="w-6 h-6 mr-4 ml-4"
+                          className="w-6 h-6 mr-4 ml-4"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
                           xmlns="http://www.w3.org/2000/svg"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
                             d="M17 8l4 4m0 0l-4 4m4-4H3"
                           />
                         </svg>

@@ -9,7 +9,10 @@ const exercises = [
       'Adding the plank to your workout routine helps you develop core strength and flexibility. This exercise tones the abs, trims down the waist and, since the plank engages and strengthens your entire core, it also improves your posture and helps to reduce back pain.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637154257/next_pwa/plank-exercise-illustration_nhrmmg.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '30 seconds',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Abdominals_i4fryr.png',
   },
   {
     id: 2,
@@ -21,7 +24,10 @@ const exercises = [
       'The superman targets your lower and middle back and helps to strengthen your core. This exercise also improves your posture and flexibility and stretches your upper body.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637173807/next_pwa/superman-exercise-illustration-spotebi_ls28vl.gif',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '10 secs',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Middle_Back_yw2op4.png',
   },
   {
     id: 3,
@@ -34,7 +40,10 @@ const exercises = [
       'Squats are a great exercise to tone the legs and the glutes and to strengthen the knee muscles. If done regularly, you can expect to see improvements in both your flexibility and balance. Squats are also great for getting the blood pumping through the entire body, thus promoting circulation, removing waste, and reducing cellulite.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431736/next_pwa/squat-exercise-illustration_ejspqg.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '15 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 4,
@@ -46,7 +55,10 @@ const exercises = [
       'The front and back lunge is a very effective lower body exercise that helps to tone and sculpt your glutes and thighs. This move also improves the flexibility of the hips and increases your balance and stability.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/front-and-back-lunges-exercise-illustration-spotebi_rwjo0a.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 5,
@@ -59,7 +71,10 @@ const exercises = [
       'Adding push-ups to your workout routine helps to shape and tone your shoulders, triceps and glutes, strengthens the chest, and helps to tone and tighten your core.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/push-up-exercise-illustration_vslont.gif',
-    bodyPart: 'chest',
+    sets: '5 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 6,
@@ -73,7 +88,10 @@ const exercises = [
       'The jump squat is a high-impact, full body exercise that you can add to your cardio routine to help build strength, speed and increase aerobic fitness. This exercise activates your lower body and helps to tone your legs and glutes.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431765/next_pwa/jump-squat-exercise-illustration_zzpulg.gif',
-    bodyPart: 'legs',
+    sets: '3 Sets',
+    reps: '5 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 7,
@@ -85,7 +103,10 @@ const exercises = [
       'The decline push up targets the pec muscles and helps to lift your breasts and strengthen your chest. This exercise also shapes and tones your shoulders, triceps, and back, and helps to improve core strength and stability.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/decline-push-up-exercise-illustration-spotebi_unjtcj.gif',
-    bodyPart: 'chest',
+    sets: '3 Sets',
+    reps: '8 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 8,
@@ -98,7 +119,10 @@ const exercises = [
       'The dumbbell/kettlebell swing targets your glutes and thighs and helps to improve lower body strength and endurance. This exercise also works your core, legs, and shoulders, and gives you a great cardio boost.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/alternating-dumbbell-swing-exercise-illustration-spotebi_p3s16l.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 9,
@@ -111,7 +135,10 @@ const exercises = [
       'The pistol squat is an advanced move that tones and builds your lower body and corrects muscle imbalances. Since this exercise requires core support and posture alignment, it also challenges and strengthens the core and improves both stability and coordination.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/pistol-squat-exercise-illustration_qarkk9.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 10,
@@ -124,7 +151,10 @@ const exercises = [
       'The jump rope is the perfect cardio exercise. It warms up the body, strengthens the muscles, increases aerobic fitness, and burns a lot of calories in a short period of time. Jumping rope can also improve speed, coordination, agility, and balance.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431765/next_pwa/jump-rope-exercise-illustration_n39qam.gif',
-    bodyPart: 'cardio',
+    sets: '1 Set',
+    reps: '2 minutes',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 11,
@@ -137,7 +167,10 @@ const exercises = [
       'Including sit ups in your workout routine helps to sculpt and tone your abdomen and trims down your waist. Both the sit up and the crunch target your abs and, because sit ups involve a greater range of movement, they also work your hip flexors, chest, and legs.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/crunches-exercise-illustration_mv6fi2.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Abdominals_i4fryr.png',
   },
   {
     id: 12,
@@ -151,7 +184,10 @@ const exercises = [
       'The squat thrust is a complete exercise that works the entire body. It increases the heart rate, boosts metabolism, and improves both agility and strength. It’s also a great exercise for losing weight and improving cardiovascular endurance.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/squat-thrust-exercise-illustration_uhsypb.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '5 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 13,
@@ -164,7 +200,10 @@ const exercises = [
       'The bulgarian split squat is a great exercise to improve your balance and knee stability, and also to target your posterior chain muscles, hamstrings and glutes. If you want to lift your butt, this is definitely one of the best exercises you can do. Pair it with sumo squats and romanian deadlifts and you’ll have a round and firm booty in no time!',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/bulgarian_squat_h8cpaz.jpg',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 14,
@@ -177,7 +216,10 @@ const exercises = [
       'Donkey kicks are a simple but effective exercise that targets the glutes and helps to tone, tighten and strengthen your buttocks. To give your glutes a great workout, combine a set of donkey kicks with a set of fire hydrants.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/donkey-kicks-exercise-illustration_wkdure.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '12 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 15,
@@ -191,7 +233,10 @@ const exercises = [
       'Burpees are an intense full body exercise that increases heart rate, strength, agility, and flexibility. This exercise is one of the most complete since it uses all major muscle groups and burns a ton of calories in a short period of time.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/burpees-exercise-illustration_jw82ma.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '8 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 16,
@@ -204,7 +249,10 @@ const exercises = [
       'Adding push-ups to your workout routine helps to shape and tone your shoulders, triceps and glutes, strengthens the chest, and helps to tone and tighten your core.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637432544/next_pwa/jumping-lunges-exercise-illustration_qlqqvy.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '6 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 17,
@@ -217,7 +265,10 @@ const exercises = [
       'The primary benefits of the pull-up are increasing strength and definition of the upper arms, specifically the biceps, the posterior deltoids of the shoulders and the teres major and latissimus dorsi muscles of the back.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/pullups_wkkgrx.jpg',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: 'Until failure',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 18,
@@ -230,7 +281,10 @@ const exercises = [
       'The bent-over barbell row, specifically with a barbell, is one of the best strength- and muscle-building movements. It allows the lifter to use more weight relative to other rowing movements. It also recruits the forearm and biceps muscles, which leads to a stronger grip.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/barbell_rows_kk53pf.jpg',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Middle_Back_yw2op4.png',
   },
   {
     id: 19,
@@ -244,7 +298,10 @@ const exercises = [
       'The military press is one of the best exercises for developing almost every major muscle group in your body, including your shoulders, upper chest, triceps, and core, and even your glutes, biceps, and lats to a lesser degree.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/barbell_press_ukmknw.jpg',
-    bodyPart: 'shoulders',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 20,
@@ -257,7 +314,10 @@ const exercises = [
       'Dips are a great exercise to tighten your triceps and to help you get rid of flabby arms quickly. Usually, the triceps don’t get worked as much as they should and that’s why it’s important to exercise those muscles regularly so that they don’t get loose and saggy.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/tricep-dips-exercise-illustration-spotebi_gcpozm.gif',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 21,
@@ -268,7 +328,10 @@ const exercises = [
       'The skull crusher is an accessory movement to increase triceps strength and hypertrophy. This can also help increase injury resistance for the elbow joint and improve overall elbow extension abilities necessary for sports performance.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431761/next_pwa/skullcrusher_ermbre.jpg',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '12 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 22,
@@ -281,7 +344,10 @@ const exercises = [
       'Curls work the biceps muscles at the front of the upper arm, and also the muscles of the lower arm—the brachialis and brachioradialis. You use these muscles anytime you pick something up, which is common throughout daily life. Doing the standing arm curl, you build strength in the upper arm and learn to use your arm muscles correctly, bracing with your core muscles. ',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/bicep_curls_u3xnpz.jpg',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 23,
@@ -296,7 +362,10 @@ const exercises = [
       'Deadlifting can increase core strength, core stability and improve your posture. Deadlifting trains most of the muscles in the legs, lower back and core. These are all muscles responsible for posture, which will help keep your shoulders, spine, and hips in alignment.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/deadlift_lpxzax.jpg',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 24,
@@ -308,7 +377,10 @@ const exercises = [
       'Calf raises are an easy and effective exercise that you can use to target the muscles on the back of the lower legs. This exercise increases the strength of your calves, allowing you to jump higher, and improves the tone, definition, and appearance of your lower legs.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/calf-raises-exercise-illustration_i0rexa.gif',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '16 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Calves_b98pct.png',
   },
   {
     id: 25,
@@ -322,7 +394,10 @@ const exercises = [
       'The lat pulldown is a fantastic exercise to strengthen the latissimus dorsi muscle, the broadest muscle in your back, which promotes good postures and spinal stability. Form is crucial when performing a lat pulldown to prevent injury and reap the best results.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/pulldown_p9zokk.jpg',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Middle_Back_yw2op4.png',
   },
   {
     id: 26,
@@ -335,7 +410,10 @@ const exercises = [
       'Leg extensions are a key exercise in strengthening the patellar ligament and quadriceps attachment for the knee. This exercise focuses on strengthening the quad alone and, therefore, strengthens key attachments for the knee joint at the same time.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/legextension_mhwbpr.jpg',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 27,
@@ -347,7 +425,10 @@ const exercises = [
     benefits: `The leg press, a type of resistance training exercise, is an excellent way to strengthen your legs. Like all strength training exercises, leg presses build muscle, reduce the risk of injury, and counteract age-related muscle loss.`,
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/legpress_umtc6b.jpg',
-    bodyPart: 'legs',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 28,
@@ -360,7 +441,10 @@ const exercises = [
       'As well as working your lower abs, the leg raise also improves the strength and flexibility of your hips and lower back, which is a considerable benefit for anyone who spends a lot of time sitting at a desk.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/legraise_jpfnji.jpg',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '8 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Abdominals_i4fryr.png',
   },
   {
     id: 29,
@@ -373,7 +457,10 @@ const exercises = [
       'The kick crunch warms up the legs, core, and glutes, improves flexibility and boosts your heart rate. This exercise also increases lower body and core strength and helps you burn extra calories.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637433129/next_pwa/kick-crunch-exercise-illustration-spotebi_bir0se.gif',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Quadriceps_no0ngv.png',
   },
   {
     id: 30,
@@ -383,7 +470,10 @@ const exercises = [
       'Ab Wheel Rollouts Are a Great Way to Build Core Strength, Improve Balance and Stability. Its a full body cardio workout and it strengthens Joints and Ligaments.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/abroll_kxdk67.jpg',
-    bodyPart: 'cardio',
+    sets: '3 Sets',
+    reps: '8 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Abdominals_i4fryr.png',
   },
   {
     id: 31,
@@ -397,7 +487,10 @@ const exercises = [
       'Bench presses are an exercise that can be used to tone the muscles of the upper body, including the pectorals, arms, and shoulders. ... They also can be an effective strengthening exercise for sports like sprinting, hockey, and football.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/benchpress_lorcop.jpg',
-    bodyPart: 'chest',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 32,
@@ -410,7 +503,10 @@ const exercises = [
       'Strengthening your shoulder and upper back muscles helps build strength in your rear deltoids and upper body. On an aesthetic level, strong deltoids will help your upper body look bigger, stronger, and more toned.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431765/next_pwa/lateralraise_cg3tlb.jpg',
-    bodyPart: 'shoulders',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 33,
@@ -423,7 +519,10 @@ const exercises = [
       'Seated cable rows increase upper-body strength by activating multiple muscle groups throughout the body, including back muscles like the latissimus dorsi in your middle back, the erector spinea muscles, the rhomboids in your upper back, and the lower trapezius.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431763/next_pwa/cablerow_xpy4bd.jpg',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Middle_Back_yw2op4.png',
   },
   {
     id: 34,
@@ -435,7 +534,10 @@ const exercises = [
       'The dumbbell shrug is one of the best exercises for toning your upper back muscles, building big traps, and improving your posture.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/shrugs_xq7v8b.png',
-    bodyPart: 'shoulders',
+    sets: '3-4 Sets',
+    reps: '16 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 35,
@@ -447,7 +549,10 @@ const exercises = [
       'The cable machine is a fantastic workout tool for any part of your body, especially your chest. There are alternatives for all dumbbell and barbell chest exercises that can be done on the cable machine that are just as good, if not better.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431764/next_pwa/cablecross_oiacqj.jpg',
-    bodyPart: 'chest',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 36,
@@ -460,7 +565,10 @@ const exercises = [
       'The front raise primarily strengthens the shoulder muscles (deltoids), but also works the upper chest (pectorals). It is an isolation exercise for shoulder flexion and can help you build strength and definition in the front and sides of your shoulders.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431765/next_pwa/frontraise_jbdzvh.jpg',
-    bodyPart: 'shoulders',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 37,
@@ -472,7 +580,10 @@ const exercises = [
       'Rope curls strengthen your biceps almost better than any other biceps exercise. If youre looking to increase the size or strength of your biceps muscles, consider adding cable curls to your routine.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/ropecurls_z8pvz2.gif',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 38,
@@ -486,7 +597,10 @@ const exercises = [
       'The triceps rope pushdown works your muscles when your arms are in a locked position. The minor amount of shoulder extension required by the move helps engage the long head of the muscle specifically, which is key for fully developing your triceps as well as improving shoulder stability.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637433631/next_pwa/rope_pulldown_cowkrk.jpg',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 39,
@@ -498,7 +612,10 @@ const exercises = [
       'Hammer curls are particularly effective because they target the outer head of the biceps brachii, the brachialis and the brachioradialis while engaging additional back and chest muscles. When performed correctly, hammer curls can maximize your arm gains and help improve grip strength.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431765/next_pwa/hammercurl_gimmvf.jpg',
-    bodyPart: 'arms',
+    sets: '4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 40,
@@ -508,7 +625,10 @@ const exercises = [
       'The benefits of sprinting are endless. It is an excellent cardiovascular exercise, it increases your stamina, burns lot of calories in a short time and moreover, it gives a boost to your metabolism so even when your workout is over, it keeps on burning calories.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431761/next_pwa/sprints_calp6i.jpg',
-    bodyPart: 'cardio',
+    sets: '3 Sets',
+    reps: '20 seconds',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Default_padiqc.png',
   },
   {
     id: 41,
@@ -520,7 +640,10 @@ const exercises = [
       'Preacher curls are a great exercise you can use to grow your biceps, brachialis, and brachioradialis the three main elbow flexors. Unlike other curls, the preacher curl deters cheating as it provides feedback to when you swing your arms as your arms will leave the bench.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431760/next_pwa/preachercurl_sz0tbv.jpg',
-    bodyPart: 'cardio',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 42,
@@ -532,7 +655,10 @@ const exercises = [
       'Tricep extensions are an excellent exercise to build and shape the upper posterior arm muscles. There are several varieties to try. Whenever you use your arms, your triceps come into action. Building strong arms, including the triceps, can help you become stronger and more functional in your everyday tasks.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/tricepextension_xyoudy.jpg',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 43,
@@ -546,7 +672,10 @@ const exercises = [
       'Because this exercise targets the triceps head primarily used during the bench press its a great way to increase your overall bench press weight. Weak triceps can be a common reason for bench press results to plateau, although most people arent aware of this.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/tatepress_z13noy.png',
-    bodyPart: 'arms',
+    sets: '3-4 Sets',
+    reps: '10 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Triceps_yx1alv.png',
   },
   {
     id: 44,
@@ -559,7 +688,10 @@ const exercises = [
       'Back extension exercises (sometimes also called hyperextensions) can strengthen lower back muscles. This includes the erector spinae, which supports the lower spine. Back extensions also work the muscles in your butt, hips, and shoulders. If you have low back pain, back extension exercises might provide relief.',
     imageUrl:
       'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637431762/next_pwa/back-extensions-exercise-illustration_pnn72t.gif',
-    bodyPart: 'back',
+    sets: '3-4 Sets',
+    reps: '14 Reps',
+    smallImg:
+      'https://res.cloudinary.com/ds0l7ww1a/image/upload/v1637857376/next_pwa/Middle_Back_yw2op4.png',
   },
 ];
 
@@ -568,9 +700,9 @@ exports.up = async function up(sql) {
   for (const exercise of exercises) {
     await sql`
       INSERT INTO exercises
-        (title, description, benefits, image_url, body_part)
+        (title, description, benefits, image_url, sets, reps, small_img)
       VALUES
-        (${exercise.title}, ${exercise.description}, ${exercise.benefits}, ${exercise.imageUrl}, ${exercise.bodyPart})
+        (${exercise.title}, ${exercise.description}, ${exercise.benefits}, ${exercise.imageUrl}, ${exercise.sets}, ${exercise.reps}, ${exercise.smallImg})
         `;
   }
 };
@@ -582,7 +714,7 @@ exports.down = async function down(sql) {
       DELETE FROM
         exercises
       WHERE
-        title = ${exercise.title} AND description = ${exercise.description} AND benefits = ${exercise.benefits} AND image_url = ${exercise.imageUrl} AND body_part = ${exercise.bodyPart}
+        title = ${exercise.title} AND description = ${exercise.description} AND benefits = ${exercise.benefits} AND image_url = ${exercise.imageUrl} AND sets = ${exercise.sets} AND reps = ${exercise.reps} AND small_img = ${exercise.smallImg}
     `;
   }
 };

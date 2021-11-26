@@ -1,7 +1,7 @@
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
-import { AddIcon, Home, LiftLogo, Moon, Sun, Users } from '../components/Icons';
+import { LiftLogo, Moon, Sun } from '../components/Icons';
 
 export default function Header(props) {
   const router = useRouter();
@@ -14,25 +14,12 @@ export default function Header(props) {
             <button
               className="flex-shrink-0 cursor-pointer"
               onClick={() => {
-                router.push('/');
+                router.push('/home');
               }}
             >
               <LiftLogo />
             </button>
-            <div className="md:block">
-              <div className="ml-8 flex items-baseline space-x-4">
-                <button
-                  aria-label="Home"
-                  onClick={() => {
-                    router.push('/');
-                  }}
-                  className="cursor-pointer dark:text-gray-300 text-gray-700 dark:hover:bg-gray-700 hover:bg-gray-100 hover:text-gray-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                >
-                  <Home aria-label="Home" />
-                </button>
-              </div>
-            </div>
-            <div className="md:block ml-8 dark:text-white">
+            <div className="md:block ml-8 dark:text-white mx-12">
               {props.username ? (
                 <>Logged in as {props.username} &nbsp;&nbsp;&nbsp;</>
               ) : (
@@ -53,26 +40,19 @@ export default function Header(props) {
               </button>
             </div>
             <div className="m-auto pl-40">
-              <ul className="list-none ml-80 flex items-baseline space-x-4 gap-16">
-                {/* <li>
+              <ul className="list-none ml-80 flex items-baseline space-x-4 gap-8">
+                <li>
                   <Link href="/users">
-                    <a>
-                      <Users className="dark:text-white" />
+                    <a className="md:block font-semibold dark:text-white">
+                      Users
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href="/custom">
-                    <a>
-                      <AddIcon className="dark:text-white" />
-                    </a>
-                  </Link>
-                </li> */}
-                <li>
                   <Link href="/exercises">
                     <a
                       data-cy="home-exercises-link"
-                      className="dark:text-gray-400 md:block dark:text-white"
+                      className="md:block font-semibold dark:text-white"
                     >
                       Exercises
                     </a>
@@ -81,10 +61,12 @@ export default function Header(props) {
                 {!props.username && (
                   <>
                     <Link href="/login">
-                      <a className="dark:text-white">Login</a>
+                      <a className="dark:text-white bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded shadow-lg">
+                        Login
+                      </a>
                     </Link>
                     <Link href="/register">
-                      <a className="dark:text-white bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
+                      <a className="dark:text-white bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded shadow-lg">
                         Get Started
                       </a>
                     </Link>

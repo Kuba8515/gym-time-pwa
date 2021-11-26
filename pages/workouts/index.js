@@ -9,16 +9,15 @@ export default function Workouts(props) {
         Browse available Workouts
       </h1>
       <div className="text-center mt-4">
-        <a
-          href="/custom"
-          className="dark:text-white bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded"
-        >
-          Create my own
-        </a>
+        <Link href="/custom">
+          <a className="dark:text-white bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded">
+            Create my own
+          </a>
+        </Link>
       </div>
-      <div className="w-cover border-2 mx-4 mt-6" />
+      <div className="border-2 border-gray-300 mt-6" />
       <div className="md:mb-0 mt-2 text-center">
-        <ul className="m-2 align-center p-4 align-center ml-16 mr-16 gap-8 list-none">
+        <ul className="mx-96 p-4 list-none mb-20">
           {props.workouts.map((workout) => {
             return (
               <li key={`workout-li-${workout.id}`}>

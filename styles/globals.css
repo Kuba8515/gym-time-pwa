@@ -11,9 +11,12 @@
   }
   ul {
     @apply list-disc;
-    @apply grid grid-cols-3;
   }
   body {
     @apply bg-gray-200 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+  }
+  ol {
+    @apply list-disc;
+    @apply grid grid-cols-3;
   }
 }

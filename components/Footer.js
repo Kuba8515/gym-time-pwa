@@ -1,10 +1,25 @@
+import Link from 'next/link';
+import { Home, User } from './Icons';
+
 export default function Footer() {
   return (
-    <footer className="absolute bottom-0 w-full h-8">
-      <p className=" text-center text-sm font-medium text-gray-800 hover:text-indigo-900 dark:text-gray-400 dark:hover:text-indigo-400">
-        Copyright &copy; <span>Next PWA Workout App</span>{' '}
-        {new Date().getFullYear()}
-      </p>
-    </footer>
+    <div>
+      <nav className="fixed mx-auto bottom-0 inset-x-0 bg-white border-2 border-gray-200 mx-72 dark:bg-gray-800">
+        <ul className="flex flex-row text-xs font-semibold list-none justify-evenly">
+          <Link href="/home">
+            <a className="w-full block py-2 px-3 text-center border-r-2 dark:text-white">
+              <Home />
+              <li>Home</li>
+            </a>
+          </Link>
+          <Link href="/custom">
+            <a className="w-full block py-2 px-3 text-center border-r-2 dark:text-white">
+              <User />
+              <li>My Workout</li>
+            </a>
+          </Link>
+        </ul>
+      </nav>
+    </div>
   );
 }

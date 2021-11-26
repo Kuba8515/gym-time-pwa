@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 import { addOrRemoveFromFollowingArray } from '../cookies';
 
 const followingArray = [{ id: 1 }];

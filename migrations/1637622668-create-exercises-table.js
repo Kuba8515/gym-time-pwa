@@ -7,7 +7,9 @@ exports.up = async function up(sql) {
       description VARCHAR(800) NOT NULL,
       benefits VARCHAR(500) NOT NULL,
 			image_url VARCHAR(300) NOT NULL,
-      body_part VARCHAR(20)
+      sets VARCHAR(20),
+      reps VARCHAR(20),
+      small_img VARCHAR(300)
     );
   `;
 };

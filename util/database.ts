@@ -21,7 +21,9 @@ export type Exercise = {
   description: string;
   benefits: string;
   imageUrl: string;
-  bodyPart: string | null;
+  sets: string;
+  reps: string;
+  smallImg: string;
 };
 
 export type UserWithPasswordHash = User & {
@@ -285,7 +287,7 @@ export async function deleteSessionByToken(token: string) {
 export async function getExercises() {
   const exercises = await sql<Exercise[]>`
     SELECT
-      id, title, description, benefits, image_url, body_part
+      id, title, description, benefits, image_url, sets, reps, small_img
     FROM
       exercises;
   `;
@@ -297,7 +299,7 @@ export async function getExercises() {
 export async function getExercise(id: number) {
   const [exercise] = await sql<[Exercise]>`
     SELECT
-      id, title, description, benefits, image_url, body_part
+      id, title, description, benefits, image_url, sets, reps, small_img
     FROM
       exercises
     WHERE
@@ -320,16 +322,16 @@ export async function getWorkouts() {
 }
 
 export async function getWorkout(id: number) {
-  const [workout] = await sql<[Workout]>`
+  const workout = await sql<Workout[]>`
     SELECT
-      id, title, description, image_url
+      *
     FROM
       workouts
     WHERE
       id = ${id};
   `;
 
-  return camelcaseKeys(workout);
+  return camelcaseKeys(workout[0]);
 }
 
 export async function getExercisebyWorkout(workoutId: number) {
@@ -337,7 +339,10 @@ export async function getExercisebyWorkout(workoutId: number) {
     SELECT
       exercises.id,
       exercises.title,
-      exercises.description
+      exercises.description,
+      exercises.sets,
+      exercises.reps,
+      exercises.small_img
     FROM
       workouts,
       exercises_workouts,
@@ -346,19 +351,6 @@ export async function getExercisebyWorkout(workoutId: number) {
       workouts.id = ${workoutId} AND
       exercises_workouts.workout_id = workouts.id AND
       exercises.id = exercises_workouts.exercise_id;
-  `;
-  return exercises.map((exercise) => camelcaseKeys(exercise));
-}
-
-export async function getExercisesbyBodypart(bodyPart: string) {
-  // if (!bodyPart) return undefined;
-  const exercises = await sql<Exercise[]>`
-    SELECT
-      body_part
-    FROM
-      exercises
-    WHERE
-      body_part = ${bodyPart}
   `;
   return exercises.map((exercise) => camelcaseKeys(exercise));
 }

@@ -70,7 +70,7 @@ export default function LoginPage(props: { refreshUsername: () => void }) {
           />
         </label>
 
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-4 rounded">
           Login
         </button>
       </form>
@@ -108,9 +108,6 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   console.log(session);
 
   if (session) {
-    // Redirect the user when they have a session
-    // token by returning an object with the `redirect` prop
-    // https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering
     return {
       redirect: {
         destination: `/users`,

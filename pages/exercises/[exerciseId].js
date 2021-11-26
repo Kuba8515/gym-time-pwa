@@ -7,17 +7,15 @@ import Layout from '../../components/Layout';
 import { getParsedCookie, setParsedCookie } from '../../util/cookies';
 
 export default function Exercise(props) {
-  const [cart, setCart] = useState(getParsedCookie('cart') || []);
-  const userCookieObject = cart.find(
+  const [customWorkout, setCustomWorkout] = useState(
+    getParsedCookie('cart') || [],
+  );
+  const userCookieObject = customWorkout.find(
     (cookieObj) => cookieObj.id === props.exercise.id,
   );
 
-  const initialItemCount = userCookieObject ? userCookieObject.itemCount : 1;
-
-  const [itemCount, setItemCount] = useState(initialItemCount);
-
   // add to cart
-  const addToCartHandler = () => {
+  const addToWorkoutHandler = () => {
     const currentCookie = getParsedCookie('cart') || [];
 
     const isItemInCart = currentCookie.some((cookieObject) => {
@@ -30,10 +28,10 @@ export default function Exercise(props) {
       );
     } else {
       // add the new product
-      newCookie = [...currentCookie, { id: props.exercise.id, itemCount }];
+      newCookie = [...currentCookie, { id: props.exercise.id }];
     }
     setParsedCookie('cart', newCookie);
-    setCart(newCookie);
+    setCustomWorkout(newCookie);
     router.push('/exercises/');
   };
   return (
@@ -41,13 +39,21 @@ export default function Exercise(props) {
       <Head>
         <title>{props.exercise.title}</title>
       </Head>
-      <div className="text-center mb-2 md:mb-0 pr-4 mt-4 mx-64">
-        <strong>Single Page: {props.exercise.title}</strong>
-        <div>{props.exercise.description}</div>
-        <div>{props.exercise.benefits}</div>
-        <Image src={props.exercise.imageUrl} width="400" height="300" />
-        <div className="align-center mt-5">
-          <button onClick={addToCartHandler}>
+      <div className="text-center md:mb-0 pr-4 mt-12 mx-64">
+        <strong>{props.exercise.title}</strong>
+        <div className="grid grid-cols-2 my-8 gap-8">
+          <Image src={props.exercise.imageUrl} width="200" height="250" />
+          <div className="grid grid-cols-1 justify-center">
+            <span className="font-semibold">
+              Instructions: <p>{props.exercise.description}</p>
+            </span>
+            <span className="font-semibold">
+              Benefits: <p>{props.exercise.benefits}</p>
+            </span>
+          </div>
+        </div>
+        <div className="align-center m-2 p-2 bg-white mx-96 shadow-2xl border-2 border-black dark:text-black">
+          <button onClick={addToWorkoutHandler}>
             <AddIcon />
           </button>
           <p className="font-bold">Add exercise</p>
