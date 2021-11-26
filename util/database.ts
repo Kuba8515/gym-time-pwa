@@ -32,7 +32,7 @@ export type UserWithPasswordHash = User & {
 
 export type Session = {
   id: number;
-  token: string;
+  sessionsToken: string;
   userId: number;
   expiryTimestamp: Date;
 };
@@ -245,12 +245,12 @@ export async function getValidSessionByToken(token: string) {
   return session && camelcaseKeys(session);
 }
 
-export async function createSession(token: string, userId: number) {
+export async function createSession(sessionsToken: string, userId: number) {
   const [session] = await sql<[Session]>`
     INSERT INTO sessions
       (sessions_token, user_id)
     VALUES
-      (${token}, ${userId})
+      (${sessionsToken}, ${userId})
     RETURNING
       *
   `;

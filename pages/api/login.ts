@@ -2,11 +2,11 @@ import crypto from 'node:crypto';
 import { NextApiRequest, NextApiResponse } from 'next';
 import { hashPassword, verifyPassword } from '../../util/auth';
 import { createSerializedRegisterSessionTokenCookie } from '../../util/cookies';
+import { verifyCsrfToken } from '../../util/csrf';
 import {
   createSession,
   deleteExpiredSessions,
   getUserWithPasswordHashByUsername,
-  insertUser,
   User,
 } from '../../util/database';
 import { Errors } from '../../util/types';

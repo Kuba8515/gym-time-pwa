@@ -1,41 +1,12 @@
 import Head from 'next/head';
-import { useState } from 'react';
 import Layout from '../../components/Layout';
 import WorkoutCard from '../../components/WorkoutCard';
-import {
-  addOrRemoveFromFollowingArray,
-  getParsedCookie,
-  setParsedCookie,
-} from '../../util/cookies';
 
 export default function User(props) {
-  const [following, setFollowing] = useState(
-    getParsedCookie('following') || [],
-  );
-  if ('errors' in props) {
-    return <div>Error: {props.errors[0].message}</div>;
-  }
-
-  if (!props.user) {
-    return <div>No user passed...</div>;
-  }
-
-  function followClickHandler() {
-    // 1. check the current state of the cookie
-    const followingArray = getParsedCookie('following') || [];
-
-    const newCookie = addOrRemoveFromFollowingArray(
-      followingArray,
-      props.user.id,
-    );
-
-    setParsedCookie('following', newCookie);
-    setFollowing(newCookie);
-  }
   return (
     <Layout username={props.username}>
       <Head>
-        <title>Single user</title>
+        <title>User Page</title>
       </Head>
       <div className="text-center mb-4 md:mb-0 pr-4 mt-4">
         <strong>Personal User Page of {props.user.name}</strong>
@@ -44,7 +15,7 @@ export default function User(props) {
         <br />
         <strong>User Workout</strong>
         <div className="md:mb-0 text-center">
-          <ul className="align-center p-8 ml-16 mr-16 gap-8 list-none">
+          <ul className="mx-96 p-4 list-none mb-20">
             {props.workouts.map((workout) => {
               return (
                 <li key={`workout-li-${workout.id}`}>

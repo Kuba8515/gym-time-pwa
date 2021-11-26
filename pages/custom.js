@@ -1,18 +1,12 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
-import {
-  addItemByProductId,
-  getParsedCookie,
-  setParsedCookie,
-  subtractItemByProductId,
-} from '../util/cookies';
+import { setParsedCookie } from '../util/cookies';
 
 export default function Cart(props) {
-  const [shoppingCart, setShoppingCart] = useState(props.cartArray);
+  const [customWorkout, setCustomWorkout] = useState(props.cartArray);
 
   const router = useRouter();
 
@@ -22,42 +16,36 @@ export default function Cart(props) {
 
   const onClickClearButton = () => {
     setParsedCookie('cart', []);
-    setShoppingCart([]);
+    setCustomWorkout([]);
   };
 
-  const onClickDeleteButton = (id) => {
-    const cookieValue = [...props.cookieArray];
-    const newCookieValue = cookieValue.filter((e) => e.id !== id);
-    setParsedCookie('cart', newCookieValue);
-    setShoppingCart(newCookieValue);
-  };
+  // const onClickDeleteButton = (id) => {
+  //   const cookieValue = [...props.cookieArray];
+  //   const newCookieValue = cookieValue.filter((e) => e.id !== id);
+  //   setParsedCookie('cart', newCookieValue);
+  //   setShoppingCart(newCookieValue);
+  // };
 
   useEffect(() => {
-    const newFinalShoppingCartArray = props.cartArray
-      // filter out all objects with a quantity below 1
+    const newWorkout = props.cartArray
+      // filter out all removed objects
       .filter((exercise) => {
         const isInSubtractedValue = props.exercises.find((item) => {
           return exercise.id === item.id;
         });
         return isInSubtractedValue;
-      })
-      // update the quantity of objects inside newFinalShoppingCartArray with the quantity inside subtractedValue
-      .map((exercise) => {
-        const e = props.exercises.find((item) => {
-          return item.id === exercise.id;
-        }).itemCount;
-        exercise.itemCount = e;
-        return exercise;
       });
-    setShoppingCart(newFinalShoppingCartArray);
-    // if either of these things changes, then it will update the finalShoppingCart
+    setCustomWorkout(newWorkout);
+    // update Workout Page
   }, [props.exercises, props.cartArray]);
 
   return (
-    <Layout>
-      {shoppingCart.length === 0 ? (
-        <div>
-          <button onClick={onClickBackToExercises}>Add exercises</button>
+    <Layout username={props.username}>
+      {customWorkout.length === 0 ? (
+        <div className="text-center mt-20">
+          <button onClick={onClickBackToExercises}>
+            Add exercises to your workout!
+          </button>
         </div>
       ) : (
         <>
@@ -72,26 +60,26 @@ export default function Cart(props) {
           </div>
           <div className="md:mb-0 px-4 mt-5 border-2 border-gray-500 mx-96 rounded shadow-2xl align-center">
             <ul className="m-2 align-center p-4 list-none align-center">
-              {shoppingCart.map((exercise) => {
+              {customWorkout.map((exercise) => {
                 const url = exercise.image;
                 return (
                   <li
                     key={`exercise-li-${exercise.id}`}
                     className="border-1 my-4 shadow-lg py-2 flex flex-start"
                   >
-                    <div className="mx-8">
+                    <div className="mx-8 bg-white p-1.5">
                       <Image src={url} width="50" height="50" />
                     </div>
-                    <div className="align-center mt-4">
+                    <div className="align-center mt-5">
                       <Link href={`/exercises/${exercise.id}`}>
                         <a>{exercise.title}</a>
                       </Link>
                     </div>
-                    <div className="mx-32 mt-4">
+                    <div className="mx-32 mt-5">
                       <p className="">{exercise.sets}</p>
                     </div>
                     <div>
-                      <p className="mt-4">{exercise.reps}</p>
+                      <p className="mt-5">{exercise.reps}</p>
                     </div>
                   </li>
                 );

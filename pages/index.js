@@ -1,10 +1,13 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
   return (
     <main>
+      <Head>
+        <title>Welcome</title>
+      </Head>
+
       <div className="flex items-center min-h-screen p-6 bg-white dark:bg-gray-900">
         <div className="flex-0 h-full max-w-4xl mx-auto overflow-hidden bg-gray-100 rounded-lg shadow-xl dark:bg-black">
           <div className="flex flex-col overflow-y-auto md:flex-row w-72 sm:w-80 md:w-auto">

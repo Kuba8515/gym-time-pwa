@@ -32,12 +32,12 @@ export default async function registerHandler(
     return;
   }
 
-  if (!req.body.csrfToken || !verifyCsrfToken(req.body.csrfToken)) {
-    res.status(400).send({
-      errors: [{ message: 'Request does not contain valid CSRF token' }],
-    });
-    return;
-  }
+  // if (!req.body.csrfToken || !verifyCsrfToken(req.body.csrfToken)) {
+  //   res.status(400).send({
+  //     errors: [{ message: 'Request does not contain valid CSRF token' }],
+  //   });
+  //   return;
+  // }
 
   try {
     const username = req.body.username;
@@ -73,10 +73,10 @@ export default async function registerHandler(
     // Create the record in the sessions table with a new token
 
     // 1. create the token
-    const token = crypto.randomBytes(64).toString('base64');
+    const sessionsToken = crypto.randomBytes(64).toString('base64');
 
     // 2. do a DB query to add the session record
-    const newSession = await createSession(token, user.id);
+    const newSession = await createSession(sessionsToken, user.id);
     console.log(newSession);
 
     // set the response to create the cookie in the browser

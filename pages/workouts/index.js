@@ -16,7 +16,7 @@ export default function Workouts(props) {
         </Link>
       </div>
       <div className="border-2 border-gray-300 mt-6" />
-      <div className="md:mb-0 mt-2 text-center">
+      <div className="md:mb-0 mt-2 text-center space-between">
         <ul className="mx-96 p-4 list-none mb-20">
           {props.workouts.map((workout) => {
             return (

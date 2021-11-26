@@ -39,11 +39,11 @@ export default function Header(props) {
                 )}
               </button>
             </div>
-            <div className="m-auto pl-40">
+            <div className="m-auto pl-36">
               <ul className="list-none ml-80 flex items-baseline space-x-4 gap-8">
                 <li>
                   <Link href="/users">
-                    <a className="md:block font-semibold dark:text-white">
+                    <a className="md:block font-semibold px-2 dark:text-white dark:hover:bg-indigo-800 rounded">
                       Users
                     </a>
                   </Link>
@@ -52,7 +52,7 @@ export default function Header(props) {
                   <Link href="/exercises">
                     <a
                       data-cy="home-exercises-link"
-                      className="md:block font-semibold dark:text-white"
+                      className="md:block font-semibold px-2 dark:text-white dark:hover:bg-indigo-800 rounded"
                     >
                       Exercises
                     </a>
@@ -75,7 +75,7 @@ export default function Header(props) {
 
                 {props.username && (
                   <Link href="/logout">
-                    <a className="dark:text-white">Logout</a>
+                    <a className="font-semibold dark:text-white">Logout</a>
                   </Link>
                 )}
               </ul>

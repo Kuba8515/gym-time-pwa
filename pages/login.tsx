@@ -1,5 +1,6 @@
 import { GetServerSidePropsContext } from 'next';
 import { useRouter } from 'next/dist/client/router';
+import Head from 'next/head';
 import { useState } from 'react';
 import Layout from '../components/Layout';
 import { Errors } from '../util/types';
@@ -12,6 +13,10 @@ export default function LoginPage(props: { refreshUsername: () => void }) {
   const router = useRouter();
   return (
     <Layout>
+      <Head>
+        <title>Login</title>
+      </Head>
+
       <h1 className="text-4xl text-center font-bold mb-2 md:mb-0 pr-4 mt-10">
         Login
       </h1>

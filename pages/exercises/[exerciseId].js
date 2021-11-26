@@ -10,11 +10,11 @@ export default function Exercise(props) {
   const [customWorkout, setCustomWorkout] = useState(
     getParsedCookie('cart') || [],
   );
-  const userCookieObject = customWorkout.find(
-    (cookieObj) => cookieObj.id === props.exercise.id,
-  );
+  // const userCookieObject = customWorkout.find(
+  //   (cookieObj) => cookieObj.id === props.exercise.id,
+  // );
 
-  // add to cart
+  // add to workout
   const addToWorkoutHandler = () => {
     const currentCookie = getParsedCookie('cart') || [];
 
@@ -23,9 +23,7 @@ export default function Exercise(props) {
     });
     let newCookie;
     if (isItemInCart) {
-      newCookie = currentCookie.filter(
-        (cookieObject) => cookieObject.itemCount + 1,
-      );
+      return null;
     } else {
       // add the new product
       newCookie = [...currentCookie, { id: props.exercise.id }];
