@@ -45,6 +45,7 @@ export default function Exercise(props) {
             <span className="font-semibold">
               Instructions: <p>{props.exercise.description}</p>
             </span>
+            <br />
             <span className="font-semibold">
               Benefits: <p>{props.exercise.benefits}</p>
             </span>

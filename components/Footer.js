@@ -18,6 +18,12 @@ export default function Footer() {
               <li>My Workout</li>
             </a>
           </Link>
+          <Link href="/users">
+            <a className="w-full block py-2 px-3 text-center border-r-2 dark:text-white">
+              <User />
+              <li>Users</li>
+            </a>
+          </Link>
         </ul>
       </nav>
     </div>

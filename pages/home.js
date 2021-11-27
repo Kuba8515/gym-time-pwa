@@ -19,8 +19,8 @@ export default function Home(props) {
           </a>
         </Link>
       </div>
-      <div className="w-cover border-2 mx-4 mt-6" />
-      <div className="md:mb-0 mt-2 text-center mx-96">
+      <div className="border-2 border-gray-300 mt-6" />
+      <div className="md:mb-0 mt-2 text-center max-w-md mx-auto">
         <ul className="m-2 align-center p-4 align-center ml-16 mr-16 mb-12 gap-8 list-none">
           {props.workouts.map((workout) => {
             return (
