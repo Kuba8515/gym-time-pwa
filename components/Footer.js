@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Home, User } from './Icons';
+import { Home, User, UsersPage } from './Icons';
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
           </Link>
           <Link href="/users">
             <a className="w-full block py-2 px-3 text-center border-r-2 dark:text-white">
-              <User />
+              <UsersPage />
               <li>Users</li>
             </a>
           </Link>

@@ -10,9 +10,10 @@ export default function Exercise(props) {
   const [customWorkout, setCustomWorkout] = useState(
     getParsedCookie('cart') || [],
   );
-  // const userCookieObject = customWorkout.find(
-  //   (cookieObj) => cookieObj.id === props.exercise.id,
-  // );
+  const userCookieObject = customWorkout.find(
+    (cookieObj) => cookieObj.id === props.exercise.id,
+  );
+  console.log(userCookieObject);
 
   // add to workout
   const addToWorkoutHandler = () => {
