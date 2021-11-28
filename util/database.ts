@@ -415,12 +415,12 @@ export async function getExercisebyWorkout(workoutId: number) {
       exercises.small_img
     FROM
       workouts,
-      exercises_workout,
+      exercises_workouts,
       exercises
     WHERE
       workouts.id = ${workoutId} AND
-      exercises_workout.workout_id = workouts.id AND
-      exercises.id = exercises_workout.exercise_id;
+      exercises_workouts.workout_id = workouts.id AND
+      exercises.id = exercises_workouts.exercise_id;
   `;
   return exercises.map((exercise) => camelcaseKeys(exercise));
 }
