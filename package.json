@@ -6,7 +6,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "migrate": "dotenv ley"
+    "migrate": "dotenv ley",
+    "heroku-postbuild": "yarn migrate up && yarn build"
   },
   "dependencies": {
     "autoprefixer": "^10.4.0",
@@ -21,6 +22,7 @@
     "next": "^12.0.4",
     "next-pwa": "^5.4.1",
     "next-themes": "^0.0.15",
+    "pg-connection-string": "^2.5.0",
     "postcss": "^8.3.11",
     "postgres": " 2.0.0-beta.11",
     "react": "17.0.2",
@@ -30,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.15.8",
-    "@next/eslint-plugin-next": "11.1.2",
+    "@next/eslint-plugin-next": "^12.0.4",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.4.1",
     "@types/csrf": "^3.1.0",
@@ -64,5 +66,8 @@
   "resolutions": {
     "eslint-plugin-react": "7.26.1",
     "eslint-plugin-testing-library": "5.0.0"
-  }
+  },
+  "cacheDirectories": [
+    ".next/cache"
+  ]
 }
