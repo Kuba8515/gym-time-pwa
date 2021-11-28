@@ -9,9 +9,6 @@
     "migrate": "dotenv ley",
     "heroku-postbuild": "yarn migrate up && yarn build"
   },
-  "engines": {
-    "node": "16.7.0"
-  },
   "dependencies": {
     "autoprefixer": "^10.4.0",
     "bcrypt": "^5.0.1",
