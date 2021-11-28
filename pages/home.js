@@ -52,8 +52,12 @@ export async function getServerSideProps(context) {
     await import('../util/database');
   // const allowedUser = await getUserBySessionToken(context.req.cookies.token);
   const workouts = await getWorkouts(context.query.id);
+<<<<<<< HEAD
   // const userWorkout = await getWorkoutByUserId(session.userId);
   // const userId = session?.userId;
+=======
+
+>>>>>>> ce598f139c0f71b46b9e2640439c47505406e6c7
   return {
     props: {
       workouts,

@@ -63,7 +63,11 @@ declare module globalThis {
 function connectOneTimeToDatabase() {
   let sql;
 
+<<<<<<< HEAD
   if (process.env.NODE_ENV === 'production' && process.env.DATABASE_URL) {
+=======
+  if (process.env.NODE_ENV === 'production') {
+>>>>>>> ce598f139c0f71b46b9e2640439c47505406e6c7
     // Heroku needs SSL connections but
 
     // has an "unauthorized" certificate
