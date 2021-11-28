@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/icon-apple-touch.png" />
         <link rel="manifest" href="/manifest.json" />
       </Head>
-      <ThemeProvider enableSystem={true} attribute="class">
+      <ThemeProvider enableSystem={false} attribute="class">
         <Component
           {...pageProps}
           username={username}
