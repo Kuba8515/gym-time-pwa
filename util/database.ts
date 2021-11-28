@@ -16,6 +16,7 @@ export type Workout = {
   id: number;
   title: string;
   description: string;
+  userId: number;
 };
 
 export type Exercise = {
@@ -27,6 +28,18 @@ export type Exercise = {
   sets: string;
   reps: string;
   smallImg: string;
+};
+
+export type UserWorkout = {
+  userWorkoutId: number;
+  userId: number;
+  workoutId: number;
+};
+
+export type ExerciseWorkout = {
+  exerciseWorkout: number;
+  workoutId: number;
+  exerciseId: number;
 };
 
 export type UserWithPasswordHash = User & {
@@ -51,6 +64,12 @@ function connectOneTimeToDatabase() {
   let sql;
 
   if (process.env.NODE_ENV === 'production' && process.env.DATABASE_URL) {
+    // Heroku needs SSL connections but
+
+    // has an "unauthorized" certificate
+
+    // https://devcenter.heroku.com/changelog-items/852
+
     sql = postgres({ ssl: { rejectUnauthorized: false } });
   } else {
     if (!globalThis.postgresSqlClient) {
@@ -196,17 +215,11 @@ export async function deleteUserById(id: number) {
 export async function getWorkoutByUserId(userId: number) {
   const workouts = await sql<[Workout]>`
     SELECT
-      workouts.id,
-      workouts.title,
-      workouts.description
+      *
     FROM
-      users,
-      users_workouts,
       workouts
     WHERE
-      users.id = ${userId} AND
-      users_workouts.user_id = users.id AND
-      users_workouts.workout_id = workouts.id;
+      user_id = ${userId}
   `;
   return workouts.map((workout) => camelcaseKeys(workout));
 }
@@ -335,6 +348,62 @@ export async function getWorkout(id: number) {
   return camelcaseKeys(workout[0]);
 }
 
+export async function getWorkoutbyWorkoutId(workoutId: number) {
+  if (!workoutId) return undefined;
+  const [workouts] = await sql<[Workout]>`
+    SELECT
+      *
+    FROM
+      workouts
+    WHERE
+      id = ${workoutId};
+  `;
+
+  return camelcaseKeys(workouts);
+}
+
+export async function deleteWorkoutbyId(id: number) {
+  const workouts = await sql`
+  DELETE FROM
+    workouts
+  WHERE
+    id = ${id}
+  RETURNING
+    *;
+`;
+  return camelcaseKeys(workouts[0]);
+}
+
+export async function updateWorkoutById(
+  id: number,
+  {
+    title,
+    description,
+    imageUrl,
+  }: {
+    title: string;
+    description: string;
+    imageUrl: string;
+  },
+) {
+  const workouts = await sql`
+    UPDATE
+      workouts
+    SET
+      title = ${title},
+      description = ${description},
+      image_url = ${imageUrl}
+    WHERE
+      id = ${id}
+    RETURNING
+      id,
+      title,
+      description,
+      image_url
+  `;
+  return camelcaseKeys(workouts[0]);
+}
+
 export async function getExercisebyWorkout(workoutId: number) {
   const exercises = await sql<[Exercise]>`
     SELECT
@@ -354,4 +423,27 @@ export async function getExercisebyWorkout(workoutId: number) {
       exercises.id = exercises_workouts.exercise_id;
   `;
   return exercises.map((exercise) => camelcaseKeys(exercise));
+}
+
+export async function insertToUserWorkout({
+  userId,
+  workoutId,
+  userWorkoutId,
+}: {
+  userId: number;
+  workoutId: number;
+  userWorkoutId: number;
+}) {
+  const [userWorkout] = await sql<[UserWorkout]>`
+      INSERT INTO wantlist
+        (user_id, workout_id, workout_user_id)
+      VALUES
+        (${userId}, ${workoutId}, ${userWorkoutId})
+      RETURNING
+        id,
+        user_id,
+        workout_id,
+        workout_user_id;
+    `;
+  return camelcaseKeys(userWorkout);
 }

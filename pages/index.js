@@ -1,7 +1,8 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
-export default function Home() {
+export default function WelcomePage() {
   return (
     <main>
       <Head>

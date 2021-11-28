@@ -32,12 +32,12 @@ export default async function registerHandler(
     return;
   }
 
-  // if (!req.body.csrfToken || !verifyCsrfToken(req.body.csrfToken)) {
-  //   res.status(400).send({
-  //     errors: [{ message: 'Request does not contain valid CSRF token' }],
-  //   });
-  //   return;
-  // }
+  if (!req.body.csrfToken || !verifyCsrfToken(req.body.csrfToken)) {
+    res.status(400).send({
+      errors: [{ message: 'Request does not contain valid CSRF token' }],
+    });
+    return;
+  }
 
   try {
     const username = req.body.username;
