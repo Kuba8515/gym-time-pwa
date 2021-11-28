@@ -1,6 +1,9 @@
 import camelcaseKeys from 'camelcase-keys';
 import dotenvSafe from 'dotenv-safe';
 import postgres from 'postgres';
+import setPostgresDefaultsOnHeroku from './setPostgresDefaultsOnHeroku';
+
+setPostgresDefaultsOnHeroku();
 
 export type User = {
   id: number;
@@ -46,17 +49,15 @@ declare module globalThis {
 
 function connectOneTimeToDatabase() {
   let sql;
-  // Heroku setup
-  if (process.env.NODE_ENV === 'production') {
+
+  if (process.env.NODE_ENV === 'production' && process.env.DATABASE_URL) {
     sql = postgres({ ssl: { rejectUnauthorized: false } });
   } else {
-    // In development, connect only once to database !
     if (!globalThis.postgresSqlClient) {
       globalThis.postgresSqlClient = postgres();
     }
     sql = globalThis.postgresSqlClient;
   }
-
   return sql;
 }
 
