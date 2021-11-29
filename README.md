@@ -1,3 +1,18 @@
+# GymTime PWA
+GymTime is a web app that allows the user to choose between different workouts depending on his goals/preferences. The user will also be able to create his own custom Workout by adding exercises from the database as well as leave a rating/comment for premade workouts.
+
+## Technologies
+The application will be built using the following technologies:
+- Next.js
+- PostgreSQL
+- [TailwindCSS](https://tailwindcss.com/)
+- [Progressive Web App](https://web.dev/progressive-web-apps/)
+- Integration testing with Cypress
+
+## Designs and Sketches:
+- DrawSQL
+- Figma
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
