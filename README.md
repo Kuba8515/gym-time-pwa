@@ -11,7 +11,13 @@ The application will be built using the following technologies:
 
 ## Designs and Sketches:
 - DrawSQL
+  ![Screenshot (30)](https://user-images.githubusercontent.com/89549982/143907391-e28ef74d-5117-4467-92ed-332c5db46ffe.png)
+
 - Figma
+  ![Screenshot (29)](https://user-images.githubusercontent.com/89549982/143907447-37e9b18b-4326-4e15-b8a7-efa5215f3602.png)
+
+
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
